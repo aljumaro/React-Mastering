@@ -8,9 +8,11 @@ module.exports = {
 	entry: './app/js/index',
 
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'js/bundle.js'
-	}, 
+	  path: path.resolve(__dirname, 'dist'),
+	  filename: 'js/[name].js',
+	  chunkFilename: 'js/[name].chunk.js',
+	  publicPath: '/'
+	},
 
 	resolve: {
 		extensions: ['.js', '.jsx', '.less'],
@@ -47,6 +49,7 @@ module.exports = {
 			}
 		]
 	},
+
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './app/index.html'
@@ -57,5 +60,10 @@ module.exports = {
 		}),
 		new webpack.optimize.UglifyJsPlugin()*/
 	],
+
+	devServer: {
+		historyApiFallback: true
+	},
+
 	devtool: 'eval'
 }
