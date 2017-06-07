@@ -41,7 +41,10 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "immutability-helper": "^2.2.2",
     "normalize.css": "^7.0.0",
+    "quill": "^1.2.6",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
