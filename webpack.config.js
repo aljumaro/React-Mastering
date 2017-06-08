@@ -65,5 +65,5 @@ module.exports = {
 		historyApiFallback: true
 	},
 
-	devtool: 'eval'
+	devtool: "#eval-source-map",
 }

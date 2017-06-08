@@ -12,8 +12,8 @@ export default class BasicInput extends React.Component {
 
 	render() {
 		return(
-			<div className={ClassNames('basic-input', {'error': this.props.error})}>
-				<input type="text" className={ClassNames({'error': this.props.error})}/>
+			<div className={ClassNames('basic-input', {'error': this.props.error})} {...this.props}>
+				<input type="text" className={ClassNames({'error': this.props.error})} {...update(this.props, {children: {$set: null}})}/>
 				{this.props.children}
 				<aside>{this.props.error || this.props.helpText || ' '}</aside>
 			</div>
